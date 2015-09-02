@@ -1,0 +1,4 @@
+h5py>=2.0.0
+argparse
+rpy2>=2.4.2
+watchdog>=0.8.3

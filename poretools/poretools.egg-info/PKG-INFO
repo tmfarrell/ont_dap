@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: poretools
+Version: 0.5.1
+Summary: A toolset for working with nanopore sequencing data
+Home-page: http://poretools.readthedocs.org
+Author: Nick Loman and Aaron Quinlan
+Author-email: arq5x@virginia.edu
+License: UNKNOWN
+Description: 
+        ``poretools`` is a toolset for working with nanopore sequencing data'
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires: python (>=2.7, <3.0)

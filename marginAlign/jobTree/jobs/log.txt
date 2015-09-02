@@ -1,0 +1,89 @@
+---JOBTREE SLAVE OUTPUT LOG---
+Set log level to DEBUG
+Set log level to DEBUG
+Starting realigning pairwise alignments
+Loading the hmm from file /Users/farrell/Documents/MinION_epigenomics_project/data_analysis/marginAlign/jobTree/jobs/gTD2/tmp_paH7yg0tZw/unnormalisedOutputModel.hmm
+Adding sequence for header: ebf19293-1f1f-446a-ae93-7afda0771124_Basecall_2D_000_template_0, with length 11457, complete header: ebf19293-1f1f-446a-ae93-7afda0771124_Basecall_2D_000_template_0
+Adding sequence for header: d9faa5e8-c78e-4e26-a429-2bd39321bd92_Basecall_2D_000_template_1, with length 9726, complete header: d9faa5e8-c78e-4e26-a429-2bd39321bd92_Basecall_2D_000_template_1
+Adding sequence for header: 72a4cfbd-9fe1-4ce0-aec4-8f7131cf6658_Basecall_2D_000_complement_2, with length 3948, complete header: 72a4cfbd-9fe1-4ce0-aec4-8f7131cf6658_Basecall_2D_000_complement_2
+Adding sequence for header: 8ca2243f-d3c3-4535-b695-586b99d2b6b9_Basecall_2D_000_template_3, with length 5752, complete header: 8ca2243f-d3c3-4535-b695-586b99d2b6b9_Basecall_2D_000_template_3
+Adding sequence for header: 53e9169e-c1c5-4613-ac30-b3759cb92219_Basecall_2D_000_2d_4, with length 7975, complete header: 53e9169e-c1c5-4613-ac30-b3759cb92219_Basecall_2D_000_2d_4
+Adding sequence for header: 53e9169e-c1c5-4613-ac30-b3759cb92219_Basecall_2D_000_complement_5, with length 7874, complete header: 53e9169e-c1c5-4613-ac30-b3759cb92219_Basecall_2D_000_complement_5
+Adding sequence for header: bac4dc8a-55d7-4a7f-9e32-c03805cff5fa_Basecall_2D_000_template_6, with length 6610, complete header: bac4dc8a-55d7-4a7f-9e32-c03805cff5fa_Basecall_2D_000_template_6
+Adding sequence for header: 57b63278-c36d-4a64-898e-57a59b16ae76_Basecall_2D_000_template_7, with length 1412, complete header: 57b63278-c36d-4a64-898e-57a59b16ae76_Basecall_2D_000_template_7
+Adding sequence for header: 73e25d95-f9b0-492e-a433-0ce9a2901482_Basecall_2D_000_template_8, with length 100942, complete header: 73e25d95-f9b0-492e-a433-0ce9a2901482_Basecall_2D_000_template_8
+Adding sequence for header: d43c6e9b-66a0-4440-a099-73562e57aa4f_Basecall_2D_000_template_9, with length 3576, complete header: d43c6e9b-66a0-4440-a099-73562e57aa4f_Basecall_2D_000_template_9
+Adding sequence for header: 196894c6-a136-4cb1-9324-7681f831ee77_Basecall_2D_000_template_10, with length 5278, complete header: 196894c6-a136-4cb1-9324-7681f831ee77_Basecall_2D_000_template_10
+Adding sequence for header: 54ad8bef-0b67-4363-8d56-1c9287080c08_Basecall_2D_000_template_11, with length 7991, complete header: 54ad8bef-0b67-4363-8d56-1c9287080c08_Basecall_2D_000_template_11
+Adding sequence for header: 7b56e17b-48a9-4cdf-808c-ff0ddb0a3aa5_Basecall_2D_000_complement_12, with length 8256, complete header: 7b56e17b-48a9-4cdf-808c-ff0ddb0a3aa5_Basecall_2D_000_complement_12
+Adding sequence for header: adaa1eee-7914-48d2-90d4-5fb4b9811ecb_Basecall_2D_000_template_13, with length 5729, complete header: adaa1eee-7914-48d2-90d4-5fb4b9811ecb_Basecall_2D_000_template_13
+Adding sequence for header: 7b56e17b-48a9-4cdf-808c-ff0ddb0a3aa5_Basecall_2D_000_2d_14, with length 8433, complete header: 7b56e17b-48a9-4cdf-808c-ff0ddb0a3aa5_Basecall_2D_000_2d_14
+Adding sequence for header: 55727ffb-cbe7-426e-a166-d17b6249f059_Basecall_2D_000_template_15, with length 15768, complete header: 55727ffb-cbe7-426e-a166-d17b6249f059_Basecall_2D_000_template_15
+Adding sequence for header: ceeceae0-d55c-4ac4-b86e-fedaae930eb9_Basecall_2D_000_template_16, with length 6214, complete header: ceeceae0-d55c-4ac4-b86e-fedaae930eb9_Basecall_2D_000_template_16
+Adding sequence for header: e6a0a03e-580e-4ecf-841c-16b6a8cb93c7_Basecall_2D_000_template_17, with length 3141, complete header: e6a0a03e-580e-4ecf-841c-16b6a8cb93c7_Basecall_2D_000_template_17
+Adding sequence for header: 72a4cfbd-9fe1-4ce0-aec4-8f7131cf6658_Basecall_2D_000_template_18, with length 30597, complete header: 72a4cfbd-9fe1-4ce0-aec4-8f7131cf6658_Basecall_2D_000_template_18
+Adding sequence for header: eafaf649-9c78-4709-8bdb-452bd919e34e_Basecall_2D_000_template_19, with length 19780, complete header: eafaf649-9c78-4709-8bdb-452bd919e34e_Basecall_2D_000_template_19
+Adding sequence for header: 4b8c3192-9a3b-4f60-846e-43c75090ff2a_Basecall_2D_000_complement_20, with length 5020, complete header: 4b8c3192-9a3b-4f60-846e-43c75090ff2a_Basecall_2D_000_complement_20
+Adding sequence for header: c2726d4f-7b36-4abf-bfd7-f018054bd7d3_Basecall_2D_000_template_21, with length 14426, complete header: c2726d4f-7b36-4abf-bfd7-f018054bd7d3_Basecall_2D_000_template_21
+Adding sequence for header: 32793089-c88c-4841-bd81-3ed6c454e1f3_Basecall_2D_000_template_22, with length 15805, complete header: 32793089-c88c-4841-bd81-3ed6c454e1f3_Basecall_2D_000_template_22
+Adding sequence for header: 4d82caa6-a17d-4335-9eda-6d79c904c5e1_Basecall_2D_000_template_23, with length 129114, complete header: 4d82caa6-a17d-4335-9eda-6d79c904c5e1_Basecall_2D_000_template_23
+Adding sequence for header: 51210bbc-59a3-4f7d-bacf-7ced50aa8df7_Basecall_2D_000_template_24, with length 1034, complete header: 51210bbc-59a3-4f7d-bacf-7ced50aa8df7_Basecall_2D_000_template_24
+Adding sequence for header: 96b34a81-dbf1-473f-a7ff-85a02436365b_Basecall_2D_000_template_25, with length 6798, complete header: 96b34a81-dbf1-473f-a7ff-85a02436365b_Basecall_2D_000_template_25
+Adding sequence for header: 3ae30aeb-1ef1-4b93-bca9-b5764c640742_Basecall_2D_000_template_26, with length 6404, complete header: 3ae30aeb-1ef1-4b93-bca9-b5764c640742_Basecall_2D_000_template_26
+Adding sequence for header: d9158717-d674-4b67-b698-c6fbc261061b_Basecall_2D_000_template_27, with length 19019, complete header: d9158717-d674-4b67-b698-c6fbc261061b_Basecall_2D_000_template_27
+Adding sequence for header: dac8794f-6d2d-46e0-8a78-42179765f26d_Basecall_2D_000_template_28, with length 105789, complete header: dac8794f-6d2d-46e0-8a78-42179765f26d_Basecall_2D_000_template_28
+Adding sequence for header: 8ca2243f-d3c3-4535-b695-586b99d2b6b9_Basecall_2D_000_complement_29, with length 14098, complete header: 8ca2243f-d3c3-4535-b695-586b99d2b6b9_Basecall_2D_000_complement_29
+Adding sequence for header: 29b9ea6b-c8a3-4243-b57b-aba78a444c39_Basecall_2D_000_2d_30, with length 8089, complete header: 29b9ea6b-c8a3-4243-b57b-aba78a444c39_Basecall_2D_000_2d_30
+Adding sequence for header: 29b9ea6b-c8a3-4243-b57b-aba78a444c39_Basecall_2D_000_complement_31, with length 8546, complete header: 29b9ea6b-c8a3-4243-b57b-aba78a444c39_Basecall_2D_000_complement_31
+Adding sequence for header: c432c7a2-8b39-4523-b6eb-3e67089d3420_Basecall_2D_000_template_32, with length 2246, complete header: c432c7a2-8b39-4523-b6eb-3e67089d3420_Basecall_2D_000_template_32
+Adding sequence for header: bd264e54-86a4-4dad-8639-6853381d8e8e_Basecall_2D_000_template_33, with length 20311, complete header: bd264e54-86a4-4dad-8639-6853381d8e8e_Basecall_2D_000_template_33
+Adding sequence for header: 850ff050-80f9-479e-aac6-320359662da9_Basecall_2D_000_template_34, with length 7363, complete header: 850ff050-80f9-479e-aac6-320359662da9_Basecall_2D_000_template_34
+Adding sequence for header: 08c4b9ca-c2fb-4b67-87ec-ef0138130c19_Basecall_2D_000_template_35, with length 11794, complete header: 08c4b9ca-c2fb-4b67-87ec-ef0138130c19_Basecall_2D_000_template_35
+Adding sequence for header: 6cac0498-dc7d-4e3e-8035-a06a8c525a52_Basecall_2D_000_template_36, with length 6489, complete header: 6cac0498-dc7d-4e3e-8035-a06a8c525a52_Basecall_2D_000_template_36
+Adding sequence for header: e68006b4-eb9b-44bc-b29f-60539318dca3_Basecall_2D_000_template_37, with length 4334, complete header: e68006b4-eb9b-44bc-b29f-60539318dca3_Basecall_2D_000_template_37
+Adding sequence for header: dac8794f-6d2d-46e0-8a78-42179765f26d_Basecall_2D_000_template_38, with length 105789, complete header: dac8794f-6d2d-46e0-8a78-42179765f26d_Basecall_2D_000_template_38
+Adding sequence for header: 8ca2243f-d3c3-4535-b695-586b99d2b6b9_Basecall_2D_000_complement_39, with length 14098, complete header: 8ca2243f-d3c3-4535-b695-586b99d2b6b9_Basecall_2D_000_complement_39
+Adding sequence for header: eafaf649-9c78-4709-8bdb-452bd919e34e_Basecall_2D_000_template_40, with length 19780, complete header: eafaf649-9c78-4709-8bdb-452bd919e34e_Basecall_2D_000_template_40
+Adding sequence for header: ebf19293-1f1f-446a-ae93-7afda0771124_Basecall_2D_000_template_41, with length 11457, complete header: ebf19293-1f1f-446a-ae93-7afda0771124_Basecall_2D_000_template_41
+Adding sequence for header: d9158717-d674-4b67-b698-c6fbc261061b_Basecall_2D_000_template_42, with length 19019, complete header: d9158717-d674-4b67-b698-c6fbc261061b_Basecall_2D_000_template_42
+Adding sequence for header: f7fd08b6-e12e-443e-8f09-7fd6e3d14ff5_Basecall_2D_000_template_43, with length 4175, complete header: f7fd08b6-e12e-443e-8f09-7fd6e3d14ff5_Basecall_2D_000_template_43
+Adding sequence for header: e291b4d6-1b57-463b-8bbf-232890ffe652_Basecall_2D_000_template_44, with length 5421, complete header: e291b4d6-1b57-463b-8bbf-232890ffe652_Basecall_2D_000_template_44
+Adding sequence for header: 73e25d95-f9b0-492e-a433-0ce9a2901482_Basecall_2D_000_template_45, with length 100942, complete header: 73e25d95-f9b0-492e-a433-0ce9a2901482_Basecall_2D_000_template_45
+Adding sequence for header: 57b63278-c36d-4a64-898e-57a59b16ae76_Basecall_2D_000_template_46, with length 1412, complete header: 57b63278-c36d-4a64-898e-57a59b16ae76_Basecall_2D_000_template_46
+Adding sequence for header: c432c7a2-8b39-4523-b6eb-3e67089d3420_Basecall_2D_000_template_47, with length 2246, complete header: c432c7a2-8b39-4523-b6eb-3e67089d3420_Basecall_2D_000_template_47
+Adding sequence for header: 9e7554ce-6129-4ef2-a16d-470526e05662_Basecall_2D_000_template_48, with length 8636, complete header: 9e7554ce-6129-4ef2-a16d-470526e05662_Basecall_2D_000_template_48
+Adding sequence for header: 699ca4eb-e79c-4087-be1d-fb268c756c57_Basecall_2D_000_template_49, with length 22363, complete header: 699ca4eb-e79c-4087-be1d-fb268c756c57_Basecall_2D_000_template_49
+Adding sequence for header: dd72a8e7-77a3-454f-a301-43881a1fa15a_Basecall_2D_000_template_50, with length 7768, complete header: dd72a8e7-77a3-454f-a301-43881a1fa15a_Basecall_2D_000_template_50
+Adding sequence for header: 181cefeb-445f-49ad-b6af-148efa814757_Basecall_2D_000_template_51, with length 9352, complete header: 181cefeb-445f-49ad-b6af-148efa814757_Basecall_2D_000_template_51
+Adding sequence for header: c6da61c7-84b1-499b-8008-82e56cbeca8e_Basecall_2D_000_2d_52, with length 6255, complete header: c6da61c7-84b1-499b-8008-82e56cbeca8e_Basecall_2D_000_2d_52
+Adding sequence for header: c6da61c7-84b1-499b-8008-82e56cbeca8e_Basecall_2D_000_template_53, with length 5551, complete header: c6da61c7-84b1-499b-8008-82e56cbeca8e_Basecall_2D_000_template_53
+Adding sequence for header: c6da61c7-84b1-499b-8008-82e56cbeca8e_Basecall_2D_000_complement_54, with length 6267, complete header: c6da61c7-84b1-499b-8008-82e56cbeca8e_Basecall_2D_000_complement_54
+Adding sequence for header: fb15ca64-d1db-4868-b6ee-c2256864abe7_Basecall_2D_000_template_55, with length 11502, complete header: fb15ca64-d1db-4868-b6ee-c2256864abe7_Basecall_2D_000_template_55
+Adding sequence for header: 18289acc-43da-4a5b-ae58-ba54d6ce1959_Basecall_2D_000_template_56, with length 6384, complete header: 18289acc-43da-4a5b-ae58-ba54d6ce1959_Basecall_2D_000_template_56
+Adding sequence for header: 8b5b7263-03bf-42ea-8165-2ee159f0886e_Basecall_2D_000_template_57, with length 9647, complete header: 8b5b7263-03bf-42ea-8165-2ee159f0886e_Basecall_2D_000_template_57
+Adding sequence for header: 3f579747-af7e-4ac2-9f78-1c61367aa3cc_Basecall_2D_000_2d_58, with length 4913, complete header: 3f579747-af7e-4ac2-9f78-1c61367aa3cc_Basecall_2D_000_2d_58
+Adding sequence for header: 3f579747-af7e-4ac2-9f78-1c61367aa3cc_Basecall_2D_000_complement_59, with length 5136, complete header: 3f579747-af7e-4ac2-9f78-1c61367aa3cc_Basecall_2D_000_complement_59
+Adding sequence for header: fcf7596f-abfa-42e1-a586-22088f209159_Basecall_2D_000_template_60, with length 2705, complete header: fcf7596f-abfa-42e1-a586-22088f209159_Basecall_2D_000_template_60
+Adding sequence for header: 2d66f0cf-c136-43ab-899a-998cd7067992_Basecall_2D_000_template_61, with length 3289, complete header: 2d66f0cf-c136-43ab-899a-998cd7067992_Basecall_2D_000_template_61
+Adding sequence for header: da59d488-8d93-4d01-b6de-f01cbf7c6f7c_Basecall_2D_000_template_62, with length 2626, complete header: da59d488-8d93-4d01-b6de-f01cbf7c6f7c_Basecall_2D_000_template_62
+Adding sequence for header: da59d488-8d93-4d01-b6de-f01cbf7c6f7c_Basecall_2D_000_2d_63, with length 2784, complete header: da59d488-8d93-4d01-b6de-f01cbf7c6f7c_Basecall_2D_000_2d_63
+Adding sequence for header: 3f579747-af7e-4ac2-9f78-1c61367aa3cc_Basecall_2D_000_template_64, with length 4341, complete header: 3f579747-af7e-4ac2-9f78-1c61367aa3cc_Basecall_2D_000_template_64
+Adding sequence for header: da59d488-8d93-4d01-b6de-f01cbf7c6f7c_Basecall_2D_000_complement_65, with length 2111, complete header: da59d488-8d93-4d01-b6de-f01cbf7c6f7c_Basecall_2D_000_complement_65
+!!Got an unexpected character in input fasta sequence: '' 
+
+cat: stdout: Broken pipe
+Traceback (most recent call last):
+  File "/Users/farrell/Documents/MinION_epigenomics_project/data_analysis/marginAlign/submodules/jobTree/src/jobTreeSlave.py", line 271, in main
+    defaultMemory=defaultMemory, defaultCpu=defaultCpu, depth=depth)
+  File "/Users/farrell/Documents/MinION_epigenomics_project/data_analysis/marginAlign/submodules/jobTree/scriptTree/stack.py", line 153, in execute
+    self.target.run()
+  File "/Users/farrell/Documents/MinION_epigenomics_project/data_analysis/marginAlign/submodules/jobTree/scriptTree/target.py", line 197, in run
+    func(*((self,) + tuple(self.args)), **self.kwargs)
+  File "/Users/farrell/Documents/MinION_epigenomics_project/data_analysis/marginAlign/submodules/cPecan/cPecanEm.py", line 180, in calculateExpectations
+    system("cat %s | cPecanRealign --logLevel DEBUG %s %s --outputExpectations=%s %s" % (alignments, sequences, nameValue("loadHmm", modelsFile, str), expectationsFile, options.optionsToRealign))
+  File "/Users/farrell/Documents/MinION_epigenomics_project/data_analysis/marginAlign/submodules/sonLib/bioio.py", line 184, in system
+    raise RuntimeError("Command: %s exited with non-zero status %i" % (command, sts))
+RuntimeError: Command: cat /Users/farrell/Documents/MinION_epigenomics_project/data_analysis/marginAlign/jobTree/jobs/gTD3/tmp_Sz0pzFP4Yz/alignments_0.cigar | cPecanRealign --logLevel DEBUG /Users/farrell/Documents/MinION_epigenomics_project/data_analysis/marginAlign/jobTree/jobs/gTD2/tmp_paH7yg0tZw/temp.fa ../XP12_lambda/XP12_unMC_lambda.fa --loadHmm /Users/farrell/Documents/MinION_epigenomics_project/data_analysis/marginAlign/jobTree/jobs/gTD2/tmp_paH7yg0tZw/unnormalisedOutputModel.hmm --outputExpectations=/Users/farrell/Documents/MinION_epigenomics_project/data_analysis/marginAlign/jobTree/jobs/gTD3/tmp_Sz0pzFP4Yz/expectation_0.txt --diagonalExpansion=10 --splitMatrixBiggerThanThis=300 exited with non-zero status 1
+Exiting the slave because of a failed job on host farrell-mac
+Due to failure we are reducing the remaining retry count of job /Users/farrell/Documents/MinION_epigenomics_project/data_analysis/marginAlign/jobTree/jobs/job to 0
+We have set the default memory of the failed job to 2147483648 bytes

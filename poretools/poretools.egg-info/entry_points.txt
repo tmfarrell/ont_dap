@@ -1,0 +1,3 @@
+[console_scripts]
+poretools = poretools.poretools_main:main
+

@@ -37,6 +37,7 @@ Installation of ONT DAP via terminal:
 
 How can I use it?
 -----------------
+## The below functionality has yet to be implemented. 
 There are three main functionalities of ONT DAP (once it is setup).
 
 (1) Sequencing performance analysis:

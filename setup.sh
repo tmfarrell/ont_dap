@@ -7,6 +7,7 @@ cd ..
 
 #make poretools and dependencies locally
 cd poretools
+pip install --user -r requirements.txt
 python setup.py install --user
 cd ..
 

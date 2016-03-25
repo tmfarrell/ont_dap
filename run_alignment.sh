@@ -5,8 +5,8 @@
 
 if [[ $1 == "-h" ]]; then 
     echo ""
-    echo -e "Usage:\t\$ ./run_alignment.sh sequence.fastq reference.fasta [output_dir]\n" 
-    echo "If output_dir not specified, saves results to <path/to/metrichor/downloads/>."
+    echo -e "Usage:\t\$ ./run_alignment.sh path/to/sequence.fastq path/to/reference.fasta [output_dir]\n" 
+    echo "If output_dir not specified, saves results to <./alignment/>."
     echo ""
     exit
 fi 
@@ -16,7 +16,8 @@ reference=$2
 if [[ -d $4 ]]; then 
     output_dir=$4
 else 
-    output_dir=$1 
+    mkdir alignment
+    output_dir=alignment
 fi 
 
 # get marginAlign dir

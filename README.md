@@ -5,7 +5,7 @@ ont_dap is a collection of bash scripts that (a) help install/ config tools comm
 used to analyze Oxford Nanopore Technologies (ONT) sequencing device data; and (b) 
 streamline the use of these tools for sequencing performance and alignment analysis.
 
-DISCLAIMER: this is unfinished; but still useful for determining which dependencies are needed.  
+DISCLAIMER: the automated setup functionality is unfinished.  
 
 ####Dependencies
 ----------------
@@ -32,7 +32,8 @@ The dependencies that will automatically be installed (if they are not already):
 ####Install/ Setup
 ------------------
 
-WARNING: this is not fully functional.
+WARNING: this is not fully functional; though it is still useful for seeing which packages 
+         need be installed. 
 
 	$ git clone https://www.github.com/tmfarrell/ont_dap.git
 	$ cd ont_dap
@@ -42,14 +43,12 @@ WARNING: this is not fully functional.
 ####Usage
 ---------
 
-   
-
 (1) Run poretools to assess sequencing run performance (Note: this should work provided all 
     the dependencies for poretools installed properly): 
 
     $ ./run_poretools.sh -h 
     
-(2) Align and compute alignment statistics (Note: this should work provided samtools is installed): 
+(2) Align and compute alignment statistics (Note: this works if samtools is installed): 
     
     $ ./run_alignment.sh -h 
     

@@ -17,15 +17,17 @@ else
     output_dir=$1
 fi
 
+poretools=poretools/poretools/poretools_main.py
+
 echo "Running poretools stats..."
-poretools stats $1 > $output_dir/stats.txt
+(python $poretools stats $1) > $output_dir/stats.txt
 
 echo "Getting fastq..."
-poretools fastq $1 > $output_dir/sequence.fastq
+(python $poretools fastq $1) > $output_dir/sequence.fastq
 
 echo "Generating read yield and histogram plots..."
-poretools yield_plot --plot-type basepairs --saveas $output_dir/yield.png $1
-poretools hist --saveas $output_dir/hist.png $1
+python $poretools yield_plot --plot-type basepairs --saveas $output_dir/yield.png $1
+python $poretools hist --saveas $output_dir/hist.png $1
 
 echo "Done."
 

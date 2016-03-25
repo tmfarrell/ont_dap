@@ -18,13 +18,12 @@ make
 cd ..
 
 #make samtools, if applicable
-if [[ ! -x $(which samtools) ]]; then 
-    git clone https://github.com/samtools/samtools.git
+:' if [[ ! -x $(which samtools) ]]; then 
+    curl https://github.com/samtools/samtools/releases/download/1.3/samtools-1.3.tar.bz2
     cd samtools*
-    ./configure
     make 
     make install 
-fi 
+fi'
 
 
 #add local dir to PATH, if not there

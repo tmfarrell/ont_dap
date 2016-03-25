@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #make poretools dependencies locally
 cd argparse-1.3.0
@@ -12,21 +12,32 @@ cd ..
 
 #make marginAlign
 cd marginAlign
-pip install --user -r requirement.txt
+pip install --user -r requirements.txt
 make
 #make test
 cd ..
 
+#make samtools, if applicable
+if [[ ! -x $(which samtools) ]]; then 
+    git https://github.com/samtools/samtools.git
+    cd samtools*
+    ./configure
+    make 
+    make install 
+fi 
+
+
 #add local dir to PATH, if not there
-if [[ :$PATH: == *:"$HOME/.local/bin":* ]] ; then
-    echo $PATH
+if [[ $PATH == *"$HOME/.local/bin"* ]] ; then
+    echo "echo $PATH"
 else
-    export PATH=$PATH:$HOME/.local/bin
+    export PATH=$PATH:$HOME/.local/bin #" >> env.sh
 fi
 
 #add marginAlign bin to PATH
-if [[ :$PATH: == *:"$PWD/marginAlign":* ]] ; then
-    echo $PATH
+if [[ $PATH == *"$PWD/marginAlign"* ]] ; then
+    echo "echo $PATH"
 else
     export PATH=$PATH:$PWD/marginAlign
+    #exec /bin/bash
 fi

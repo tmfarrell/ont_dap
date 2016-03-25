@@ -19,7 +19,7 @@ cd ..
 
 #make samtools, if applicable
 if [[ ! -x $(which samtools) ]]; then 
-    git https://github.com/samtools/samtools.git
+    git clone https://github.com/samtools/samtools.git
     cd samtools*
     ./configure
     make 

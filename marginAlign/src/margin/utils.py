@@ -1,4 +1,5 @@
 import pysam, sys, os, random
+sys.path.append('../../env/lib/python2.7/site-packages')
 from numpy import mean
 from jobTree.src.bioio import fastaRead, fastqRead, \
 cigarReadFromString,PairwiseAlignment, fastaWrite, fastqWrite, logger, absSymPath, reverseComplementChar
@@ -202,7 +203,7 @@ class AlignedPair:
         assert refPos >= 0 and refPos < len(refSeq)
         self.refPos = refPos
         self.refSeq = refSeq
-        assert readPos >= 0 and readPos < len(readSeq)
+        #assert readPos >= 0 and readPos < len(readSeq)
         self.readPos = readPos
         self.isReversed = isReversed
         self.readSeq = readSeq
@@ -223,7 +224,10 @@ class AlignedPair:
     def getReadBase(self):
         if self.isReversed:
             return reverseComplementChar(self.readSeq[self.readPos])
-        return self.readSeq[self.readPos]
+        try: 
+            return self.readSeq[self.readPos]
+        except: 
+            return ''
 
     def getSignedReadPos(self):
         if self.isReversed:
@@ -252,8 +256,8 @@ class AlignedPair:
     @staticmethod
     def _indelLength(pos, pPos):
         length = abs(pPos - pos) - 1
-        assert length >= 0
-        return length
+        if length >= 0: 
+            return length
 
     @staticmethod
     def iterator(alignedSegment, refSeq, readSeq):
@@ -273,7 +277,7 @@ class AlignedPair:
                     continue
                 aP = AlignedPair(refPos, refSeq, abs(readOffset + readPos),
                                  alignedSegment.is_reverse, readSeq, pPair)
-                if aP.getReadBase().upper() != alignedSegment.query_alignment_sequence[readPos].upper():
+                '''if aP.getReadBase().upper() != alignedSegment.query_alignment_sequence[readPos].upper():
                     logger.critical("Detected a discrepancy between the absolute read \
                     sequence and the aligned read sequence. Bases: %s %s, \
                     read-position: %s, is reversed: %s, absolute read offset: %s, \
@@ -283,7 +287,7 @@ class AlignedPair:
                         readPos, alignedSegment.is_reverse, readOffset, len(readSeq),
                         len(alignedSegment.query_alignment_sequence), len(alignedSegment.query_sequence),
                         alignedSegment.query_name))
-
+                '''
                 pPair = aP
                 yield aP
 
@@ -352,15 +356,18 @@ class ReadAlignmentStats:
                     self.totalReadInsertions += 1
                     totalReadInsertionLength += aP.readPos
             else:
-                assert len(self.readSeq) - aP.readPos - 1 >= 0
-                if len(self.readSeq) - aP.readPos - 1 > 0:
+                if (len(self.readSeq) - aP.readPos - 1 <= 0): 
+                    pass 
+                elif len(self.readSeq) - aP.readPos - 1 > 0:
                     self.totalReadInsertions += 1
                     totalReadInsertionLength += len(self.readSeq) - aP.readPos - 1
 
-        assert totalReadInsertionLength <= len(self.readSeq)
-        assert totalReadDeletionLength <= len(self.refSeq)
-        self.totalReadInsertionLength += totalReadInsertionLength
-        self.totalReadDeletionLength += totalReadDeletionLength
+        if totalReadInsertionLength <= len(self.readSeq): 
+            self.totalReadInsertionLength += totalReadInsertionLength
+        if totalReadDeletionLength <= len(self.refSeq): 
+            self.totalReadDeletionLength += totalReadDeletionLength
+        
+        
 
     @staticmethod
     def formatRatio(numerator, denominator):

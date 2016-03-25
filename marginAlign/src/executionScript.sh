@@ -21,7 +21,7 @@ export PYTHONPATH=${BASEDIR}/src:${BASEDIR}/submodules
 export PATH=${BASEDIR}/submodules/sonLib/bin:${BASEDIR}/submodules/jobTree/bin:${BASEDIR}/submodules/bwa/:${BASEDIR}/submodules/last/src/:${BASEDIR}/submodules/last/scripts/:${PATH}
 
 #Run described script
-python $@
+python2.7 $@
 
 # Deactivate virtualenv if it was activated
 if [ $virtenv ]; then

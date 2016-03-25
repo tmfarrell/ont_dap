@@ -16,35 +16,40 @@ reference=$2
 if [[ -d $4 ]]; then 
     output_dir=$4
 else 
-    mkdir alignment
+    if [[ ! -d alignment ]]; then 
+        mkdir alignment
+    fi 
     output_dir=alignment
 fi 
 
 # get marginAlign dir
-mA="marginAlign"
+:'mA="marginAlign"
 mA_bin=$(which $mA)
 mA_dir=${mA_bin:0: ${#mA_bin}-${#mA}}
 
-# run marginAlign
-marginAlign $fastq $reference $output_dir/alignment.sam --jobTree $mA_dir/jobTree 2> $output_dir/align_err.txt
-
 # create index for reference
+echo "Indexing reference..."
 samtools faidx $reference
 
-# convert sam to bam
-samtools view -bt $reference.fai $output_dir/alignment.sam > $output_dir/alignment.bam
+# run marginAlign
+echo "Running marginAlign..."
+marginAlign $fastq $reference $output_dir/alignment.sam --jobTree $output_dir/jobTree 2> $output_dir/align_err.txt
 
+# samtools operations
+echo "Converting, sorting and indexing alignment..."
+# sam to bam
+samtools view -bt $reference.fai $output_dir/alignment.sam > $output_dir/alignment.bam
 # sort
 samtools sort $output_dir/alignment.bam $output_dir/alignment.sorted
-
 # index
 samtools index $output_dir/alignment.sorted.bam
-
-# print samtools stats
+# stats
 samtools flagstat $output_dir/alignment.sorted.bam
-
-# create sam with proper header
-samtools view -bt $reference.fai $output_dir/alignment.sam > $output_dir/alignment_hdr.sam
+# header
+samtools view -bt $reference.fai $output_dir/alignment.sam > $output_dir/alignment_hdr.sam'
 
 # get alignment stats
+echo "Computing alignment stats..."
 marginStats $output_dir/alignment_hdr.sam $fastq $reference --printAlignmentData --includeUnaligned > $output_dir/alignment_stats.txt
+
+echo "Done."

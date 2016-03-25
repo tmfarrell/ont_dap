@@ -104,10 +104,9 @@ def writeAxt(maf):
     outWords.extend(head[:3])
     outWords.extend(chain(*tail))
     outWords.append(maf.namesAndValues["score"])
-
-    print joined(outWords, " ")
-    for i in maf.alnStrings: print i
-    print  # print a blank line at the end
+    print(joined(outWords, " "))
+    for i in maf.alnStrings: print(i)
+    print()  # print a blank line at the end
 
 ##### Routines for converting to tabular format: #####
 
@@ -132,7 +131,7 @@ def writeTab(maf):
     try: outWords.append(maf.namesAndValues["mismap"])
     except KeyError: pass
 
-    print joined(outWords, "\t")
+    print(joined(outWords, "\t"))
 
 ##### Routines for converting to PSL format: #####
 
@@ -213,7 +212,7 @@ def writePsl(maf, isProtein):
                 qNumInsert, qBaseInsert, tNumInsert, tBaseInsert, strand,
                 qName, qSeqSize, qStart, qEnd, tName, tSeqSize, tStart, tEnd,
                 blockCount, blockSizes, qStarts, tStarts)
-    print joined(outWords, "\t")
+    print(joined(outWords, "\t"))
 
 ##### Routines for converting to SAM format: #####
 
@@ -248,15 +247,15 @@ def karyotypicSortKey(s):
     return naturalSortKey(s)
 
 def writeSamHeader(sequenceLengths, dictFile, readGroupItems):
-    print "@HD\tVN:1.3\tSO:unsorted"
+    print("@HD\tVN:1.3\tSO:unsorted")
     for k in sorted(sequenceLengths, key=karyotypicSortKey):
-        print "@SQ\tSN:%s\tLN:%s" % (k, sequenceLengths[k])
+        print("@SQ\tSN:%s\tLN:%s" % (k, sequenceLengths[k]))
     if dictFile:
         for i in fileinput.input(dictFile):
-            if i.startswith("@SQ"): print i,
+            if i.startswith("@SQ"): print(i,)
             elif not i.startswith("@"): break
     if readGroupItems:
-        print "@RG\t" + "\t".join(readGroupItems)
+        print("@RG\t" + "\t".join(readGroupItems))
 
 mapqMissing = "255"
 mapqMaximum = "254"
@@ -352,7 +351,7 @@ def writeSam(maf, rg):
         if score: outWords.append(score)
         if evalue: outWords.append(evalue)
         if rg: outWords.append(rg)
-        print "\t".join(outWords)
+        print("\t".join(outWords))
 
 ##### Routines for converting to BLAST-like format: #####
 
@@ -390,18 +389,18 @@ def writeBlast(maf, lineSize, oldQueryName):
     dieUnlessPairwise(maf)
 
     if maf.seqNames[1] != oldQueryName:
-        print "Query= %s" % maf.seqNames[1]
-        print "         (%s letters)" % maf.seqSizes[1]
-        print
+        print("Query= %s" % maf.seqNames[1])
+        print("         (%s letters)" % maf.seqSizes[1])
+        print()
 
-    print ">%s" % maf.seqNames[0]
-    print "          Length = %s" % maf.seqSizes[0]
-    print
+    print(">%s" % maf.seqNames[0])
+    print("          Length = %s" % maf.seqSizes[0])
+    print()
 
     scoreLine = " Score = %s" % maf.namesAndValues["score"]
     try: scoreLine += ", Expect = %s" % maf.namesAndValues["expect"]
     except KeyError: pass
-    print scoreLine
+    print(scoreLine) 
 
     alignmentColumns = zip(*maf.alnStrings)
 
@@ -412,26 +411,26 @@ def writeBlast(maf, lineSize, oldQueryName):
     gaps = alnSize - quantify(alignmentColumns, isGapless)
     gapPercent = 100 * gaps // alnSize  # round down, like BLAST
     if gaps: identLine += ", Gaps = %s/%s (%s%%)" % (gaps, alnSize, gapPercent)
-    print identLine
+    print(identLine) 
 
     strands = map(strandText, maf.strands)
-    print " Strand = %s / %s" % (strands[1], strands[0])
-    print
+    print(" Strand = %s / %s" % (strands[1], strands[0]))
+    print()
 
     for chunk in blastChunker(maf, lineSize, alignmentColumns):
         cols, rows, starts, ends = chunk
         startWidth = maxlen(starts)
         matchSymbols = map(pairwiseMatchSymbol, cols)
         matchSymbols = ''.join(matchSymbols)
-        print "Query: %-*s %s %s" % (startWidth, starts[1], rows[1], ends[1])
-        print "       %-*s %s"    % (startWidth, " ", matchSymbols)
-        print "Sbjct: %-*s %s %s" % (startWidth, starts[0], rows[0], ends[0])
-        print
+        print("Query: %-*s %s %s" % (startWidth, starts[1], rows[1], ends[1]))
+        print("       %-*s %s"    % (startWidth, " ", matchSymbols))
+        print("Sbjct: %-*s %s %s" % (startWidth, starts[0], rows[0], ends[0]))
+        print()
 
 ##### Routines for converting to HTML format: #####
 
 def writeHtmlHeader():
-    print '''
+    print('''
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
  "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en"><head>
@@ -458,7 +457,7 @@ pre {font-family: "Courier New", monospace, serif; font-size: 0.8125em}
 <pre class="key"><span class="e">  </span> prob &gt; 0.5  </pre>
 <pre class="key"><span class="f">  </span> prob &le; 0.5  </pre>
 </div>
-'''
+''')
 
 def probabilityClass(probabilityColumn):
     p = ord(min(probabilityColumn)) - 33
@@ -493,7 +492,7 @@ def writeHtml(maf, lineSize):
         scoreLine += " score=%s" % maf.namesAndValues["score"]
         scoreLine += ", expect=%s" % maf.namesAndValues["expect"]
     except KeyError: pass
-    print "<h3>%s:</h3>" % scoreLine
+    print("<h3>%s:</h3>" % scoreLine)
 
     if maf.pLines:
         probRows = [i[1] for i in maf.pLines]
@@ -505,7 +504,7 @@ def writeHtml(maf, lineSize):
     nameWidth = maxlen(maf.seqNames)
     alignmentColumns = zip(*maf.alnStrings)
 
-    print '<pre>'
+    print('<pre>')
     for chunk in blastChunker(maf, lineSize, alignmentColumns):
         cols, rows, starts, ends = chunk
         startWidth = maxlen(starts)
@@ -518,10 +517,10 @@ def writeHtml(maf, lineSize):
             spans = [htmlSpan(r, i) for i in classRuns]
             spans = ''.join(spans)
             formatParams = nameWidth, n, startWidth, s, spans, endWidth, e
-            print '%-*s %*s %s %*s' % formatParams
-        print ' ' * nameWidth, ' ' * startWidth, matchSymbols
-        print
-    print '</pre>'
+            print('%-*s %*s %s %*s' % formatParams)
+        print(' ' * nameWidth, ' ' * startWidth, matchSymbols)
+        print()
+    print('</pre>')
 
 ##### Routines for reading MAF format: #####
 
@@ -547,7 +546,7 @@ def mafInput(lines, isKeepComments):
         elif w[0] == "p":
             p.append(w)
         elif i[0] == "#" and isKeepComments:
-            print i,
+            print(i,)
     if a: yield Maf(a, s, q, p)
 
 def isFormat(myString, myFormat):
@@ -579,7 +578,7 @@ def mafConvert(opts, args):
         elif isFormat(format, "sam"): writeSam(maf, rg)
         elif isFormat(format, "tabular"): writeTab(maf)
         else: raise Exception("unknown format: " + format)
-    if isFormat(format, "html") and not opts.noheader: print "</body></html>"
+    if isFormat(format, "html") and not opts.noheader: print("</body></html>")
 
 if __name__ == "__main__":
     signal.signal(signal.SIGPIPE, signal.SIG_DFL)  # avoid silly error message
@@ -617,6 +616,6 @@ if __name__ == "__main__":
 
     try: mafConvert(opts, args)
     except KeyboardInterrupt: pass  # avoid silly error message
-    except Exception, e:
+    except Exception as e:
         prog = os.path.basename(sys.argv[0])
         sys.exit(prog + ": error: " + str(e))

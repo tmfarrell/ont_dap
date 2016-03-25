@@ -42,13 +42,14 @@ WARNING: this is not fully functional.
 ####Usage
 ---------
 
-These should work provided all the dependencies for poretools installed properly.   
+   
 
-(1) Run poretools to assess sequencing run performance: 
+(1) Run poretools to assess sequencing run performance (Note: this should work provided all 
+    the dependencies for poretools installed properly): 
 
     $ ./run_poretools.sh -h 
     
-(2) Align and compute alignment statistics: 
+(2) Align and compute alignment statistics (Note: this should work provided samtools is installed): 
     
     $ ./run_alignment.sh -h 
     

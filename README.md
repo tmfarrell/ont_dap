@@ -2,7 +2,7 @@
 ----------
 
 ont_dap is a collection of bash scripts that (a) help install/ config tools commonly 
-used to analyze Oxford Nanopore Technologies (ONT) sequencing device data; and (b) 
+used to analyze Oxford Nanopore Technologies (ONT) sequencing data; and (b) 
 streamline the use of these tools for sequencing performance and alignment analysis.
 
 DISCLAIMER: the automated setup functionality is unfinished.  

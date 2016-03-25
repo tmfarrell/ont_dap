@@ -31,7 +31,7 @@ fi
 if [[ $PATH == *"$HOME/.local/bin"* ]] ; then
     echo "echo $PATH"
 else
-    export PATH=$PATH:$HOME/.local/bin #" >> env.sh
+    export PATH=$PATH:$HOME/.local/bin
 fi
 
 #add marginAlign bin to PATH
@@ -39,5 +39,4 @@ if [[ $PATH == *"$PWD/marginAlign"* ]] ; then
     echo "echo $PATH"
 else
     export PATH=$PATH:$PWD/marginAlign
-    #exec /bin/bash
 fi

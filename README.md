@@ -1,4 +1,4 @@
-###ont_dap
+ont_dap
 ----------
 
 ont_dap is a collection of bash scripts that (a) help install/ config tools commonly 
@@ -7,7 +7,7 @@ streamline the use of these tools for sequencing performance and alignment analy
 
 DISCLAIMER: the automated setup functionality is unfinished.  
 
-####Dependencies
+Dependencies
 ----------------
     Mac or Linux OS    
     R >= 3.0.0 
@@ -29,7 +29,7 @@ The dependencies that will automatically be installed (if they are not already):
 	watchdog >= 0.8.3
 
 
-####Install/ Setup
+Install/ Setup
 ------------------
 
 WARNING: this is not fully functional; though it is still useful for seeing which packages 
@@ -40,7 +40,7 @@ WARNING: this is not fully functional; though it is still useful for seeing whic
 	$ source setup.sh   
 
 
-####Usage
+Usage
 ---------
 
 (1) Run poretools to assess sequencing run performance (Note: this should work provided all 
@@ -53,5 +53,5 @@ WARNING: this is not fully functional; though it is still useful for seeing whic
     $ ./run_alignment.sh -h 
     
 
-#####Contact: 
+Contact: 
 Tim Farrell, tfarrell01@gmail.com
